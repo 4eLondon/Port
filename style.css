@@ -1,0 +1,169 @@
+*{
+    padding:0;
+    margin:0;
+    cursor:default;
+}
+
+/* Spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Slow stop animation */
+@keyframes slowStop {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Presistents */
+
+nav{
+    height: 10%;
+    width:100%;
+    position:fixed;
+    top:0; 
+}
+
+.now_playing{
+    height: 80px;
+    width:80px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    left: 0;
+    z-index: 2;
+    transform: translate(20%, 10%);
+    
+}
+
+.now_playing img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    animation: none; /* Default: no animation */
+}
+
+.now_playing img.playing {
+    animation: spin 3s linear infinite; /* Spin while playing */
+}
+
+.now_playing img.stopping {
+    animation: slowStop 2s linear; /* Slow stop when paused */
+}
+
+#playing_title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 40%;
+    width: 10%; /* Start with a smaller width */
+    text-align: center;
+    border-radius: 12px;
+    transform: translate(10%, 65%); /* Start closer to the disk */
+    transition: transform 0.5s ease, width 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Disable interactions when hidden */
+}
+
+#playing_title.extend {
+    transform: translate(20%, 65%); /* Move to the extended position */
+    width: 20%; /* Extend width */
+    opacity: 1; /* Make visible */
+    pointer-events: auto; /* Enable interactions */
+}
+
+#playing_title.shrink {
+    transform: translate(10%, 65%); /* Shrink back to the disk */
+    width: 10%; /* Shrink width */
+    opacity: 0; /* Fade out */
+    pointer-events: none; /* Disable interactions */
+}
+
+#playing_title img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#playing_title p{
+    position: relative;
+    z-index: 2;
+    margin: 2%;
+ }
+
+
+footer {
+    opacity: 0; /* Start fully transparent */
+    visibility: hidden; /* Ensure it's not interactable when hidden */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth fade-in/out */
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(126, 126, 126);
+}
+
+footer.visible {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it interactable */
+}
+
+.muse_runner{
+    height:10px;
+    width: 70%;
+    position: absolute;
+    top:15%;
+    left:50%;
+    transform:translate(-50%);
+    border-radius: 12px;
+    background-color: rgb(83, 83, 83);
+    cursor: pointer; 
+}
+#muse_runner_inner{
+    width:0%;
+    height: 3px;
+    background-color: white;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform:translate(1%,-50%);
+}
+
+.muse_player{
+    display: flex;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -30%);
+}
+
+.muse_player button{
+    border:none; 
+    padding:0; 
+   cursor: pointer; 
+    background:none; 
+    width:100px; 
+    height:50px;
+}
+
+
+.muse_buttons{
+    height:50px;
+    width:50px;
+}

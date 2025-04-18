@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+      
+     </head>
+
+        <body>
+
+<div class="Persistents">
+
+    <nav>
+        <div class="now_playing">
+            <img src="assets/muse/disc.png" alt="now playing">
+        </div>
+
+        <div id="playing_title">
+            <img src="" alt="">
+            <p>Now playing: song by song</p>
+        </div>
+        
+    </nav>
+
+
+    <footer>
+<!-- [ Muse ] -->
+
+    <!--Progress bar-->
+    <div class="muse_runner">
+        <div id="muse_runner_inner"></div>
+    </div>
+
+    <div class="muse_player">
+
+        <!--Player Buttons-->
+
+        <!--Repeat-->    
+        <button id="repeat" onclick="repeat()">
+            <img src="assets/muse/repeat.gif" alt="repeat" class="muse_buttons">
+        </button>
+
+        <!--Previous-->    
+        <button id="previoussong" onclick="selectlast()">
+            <img src="assets/muse/previous.gif" alt="previous" class="muse_buttons">
+        </button>
+
+        <!--Playback-->    
+        <button id="playback" onclick="toggleaudio()">
+            <img id="muse_playback" src="assets/muse/play.gif" alt="playback" class="muse_buttons">
+        </button>
+
+        <!--Next-->    
+        <button id="nextsong" onclick="selectnext()">
+            <img src="assets/muse/next.gif" alt="next" class="muse_buttons">
+        </button>
+
+        <!--Shuffle-->    
+        <button id="shufflesong" onclick="shufflesongs()">
+            <img src="assets/muse/shuffle.gif" alt="shuffle" class="muse_buttons">
+        </button>
+
+        <!--Audio controller-->
+            <audio controls hidden>
+                <source src="" type="audio/mp3">
+                your browser doesn't support the audio tag.
+            </audio>
+
+    </div>
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+            </body>
+    </html>

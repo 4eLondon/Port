@@ -3,61 +3,100 @@
 
     <head>
         <link rel="stylesheet" href="style.css">
-      
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="icon" href="assets/main/icon.gif" type="image/x-icon">
      </head>
 
         <body>
 
+
+    <!-- = x = x = [ Presistent content ] = x = x = -->
 <div class="Persistents">
 
-    <nav>
-        <div class="now_playing">
-            <img src="assets/muse/disc.png" alt="now playing">
+     <!--  [ Preloaders section] -->
+    <div class="Preload">
+        <img src="" alt="">
+
+        <div id="disclaimer">
+        <img src="assets/main/moon.gif" alt="">
+        <p>
+            Disclaimer
+            <br><br>
+            This website was made and optomized for desktop use only.
+            <br>
+            Most assets on this website are made by me, however, some such as the songs and wallpapers used are not.
+            <br>
+            I dont claim ownership of any of the songs or wallpapers used on this website.
+        </p>
         </div>
 
-        <div id="playing_title">
-            <img src="" alt="">
+    </div>
+
+    <!--  [ Background section] -->
+    <div id="bg_base"></div>
+<img src="assets/main/bk1.gif" alt="background" id="bg_overlay">
+<img src="" id="bg_overlay2">
+
+
+
+    <!--  [ Muse top section] -->
+    <div class="Muse1">
+
+        <!-- ( Music toggle ) -->
+        <div id="music_toggle">
+            <button>
+                 <img src="assets/muse/disk.gif" alt="Now playing">
+            </button>
+        </div>
+
+         <!-- ( Music title ) -->
+        <div id="music_title">
+            <img src="assets/muse/label.gif" alt="Now playing title">
             <p>Now playing: song by song</p>
         </div>
         
-    </nav>
+    </div> 
 
+     <!--  [ Muse bottom section ] -->
+    <div class="Muse2">
+        <img src="assets/muse/back.gif" alt="" id="music_cover">
 
-    <footer>
 <!-- [ Muse ] -->
 
     <!--Progress bar-->
-    <div class="muse_runner">
-        <div id="muse_runner_inner"></div>
+    <div class="music_bar">
+        <div id="music_bar_progress"></div>
     </div>
 
-    <div class="muse_player">
+    <div class="music_player">  
 
         <!--Player Buttons-->
 
         <!--Repeat-->    
         <button id="repeat" onclick="repeat()">
-            <img src="assets/muse/repeat.gif" alt="repeat" class="muse_buttons">
+            <img src="assets/muse/norepeat.gif" alt="repeat" class="music_buttons">
         </button>
 
         <!--Previous-->    
         <button id="previoussong" onclick="selectlast()">
-            <img src="assets/muse/previous.gif" alt="previous" class="muse_buttons">
+            <img src="assets/muse/previous.gif" alt="previous"  class="music_buttons">
         </button>
 
         <!--Playback-->    
         <button id="playback" onclick="toggleaudio()">
-            <img id="muse_playback" src="assets/muse/play.gif" alt="playback" class="muse_buttons">
+            <img id="muse_playback" src="assets/muse/play.gif" alt="playback"  class="music_buttons">
         </button>
 
         <!--Next-->    
         <button id="nextsong" onclick="selectnext()">
-            <img src="assets/muse/next.gif" alt="next" class="muse_buttons">
+            <img src="assets/muse/next.gif" alt="next"  class="music_buttons">
         </button>
 
         <!--Shuffle-->    
         <button id="shufflesong" onclick="shufflesongs()">
-            <img src="assets/muse/shuffle.gif" alt="shuffle" class="muse_buttons">
+            <img src="assets/muse/notshuffle.gif" alt="shuffle"  class="music_buttons">
         </button>
 
         <!--Audio controller-->
@@ -68,11 +107,163 @@
 
     </div>
 
-    </footer>
+    </div>
+
+     <!--  [ Navigation ]  -->
+    <div class="Navigate">
+        <img src="assets/main/page1.gif" alt="" id="Nav_page">
+
+        <div class="Nav_links">
+
+            <button id="nav_home" onclick="Gohome()">
+                <img src="assets/main/Home.gif" alt="home" class="nav_buttons_img">
+            </button>
+
+            <button id="nav_about" onclick="Goabout()">
+                <img src="assets/main/about.gif" alt="about" class="nav_buttons_img">
+            </button>
+
+            <button id="nav_projects" onclick="Goprojects()">
+                <img src="assets/main/projects.gif" alt="projects" class="nav_buttons_img">
+            </button>
+
+        </div>
+
+    </div>
+
+    <!--  [ Contact ]  -->
+    <div class="Contact">
+        
+        <img src="assets/main/contact.png" alt="" id="contact_toggle">
+
+        <div class="socials">
+            <img src="assets/main/page1.gif" alt="" id="contact_page">
+
+            <a href="mailto:rhyncc@gmail.com"><img src="assets/main/mail.png" alt="Email" class="socials_links"></a>
+
+            <a href="javascript:alert('Telephone: 230-2591');"><img src="assets/main/phone.png" alt="Telephone" class="socials_links"></a>
+
+            <a href="https://github.com/4eLondon"><img src="assets/main/git.png" alt="github" class="socials_links"></a>
+
+            <a href=""><img src="assets/main/social.png" alt="socials" class="socials_links"></a>
+        </div>
+    </div>
 
 </div>
 
+    <!-- = x = x = [ Main content ] = x = x = -->
+<div class="Main">
+
+       <!--  [ Home ] -->
+    <div class="Home">
+
+        <!-- box 1 -->
+        <div class="h_box1">
+            <img src="assets/main/border.gif" alt="box1" id="h_box1_img">
+            <img src="assets/main/ me2.png" alt="box1img" id="h_box1_img2">
+        </div>
+       
+
+   
+
+        <!-- box 3 -->
+        <div class="h_box3">
+            <img src="assets/main/page2.gif" alt="box3" >
+            <p id="h_box3_text">
+                Welcome <i>User</i>
+                <br>
+                <br>
+                This website is a dedicated to everything me.
+                Navigation can be done using the buttons on the left, 
+                with a music player toggle at the top left corner of the page.
+                This webpage currently does not have a mobile version and is made to be veiwed fullscreen on desktops.
+            </p>
+        </div>
+
+             <!-- box 2 -->
+             <div class="h_box2">
+                <img src="assets/main/page3.gif" alt="box2" >
+                <p id="h_box2_text">
+
+                    <i>Patch Notes</i>
+                    <br>
+                    <br>
+                   [ This site is a actively being work on and will be updated regularly. ]
+                    <br>
+                    <br>
+                    [ I am currently working on adding more content to the site, 
+                    including more projects and a blog section but for now the site is running on <i>VER 1.0.0</i>. ]
+                    <br>
+                    <br>
+                    [ I hope you enjoy your stay and feel free to contact me if you have any questions or suggestions. ]
+            </div>
+
+
+    </div>
+
+       <!--  [ About ] -->
+    <div class="About">
+
+        <!-- box 1 -->
+        <div class="a_box1">
+            <img src="assets/main/border.gif" alt="border"  id="a_box1_img">
+            <img src="assets/main/ me.png" alt="portrait" id="a_box1_img2">
+        </div>
+
+        <!-- box 2 -->
+        <div class="a_box2">
+            <img src="assets/main/page4.gif" alt="box1" id="a_box2_img">
+            <p>
+                About me
+                <br><br>
+                My name is [REDACTED], a student at the Moneague College.
+                I am currently studying Managment of information Systems with 
+                intrests in web development and game development. 
+                At the time of writing this, I am 20 years old and in my second year of college. 
+                <br><br>
+                I am a aspiring programmer, I started learning programming in 2018 and have been
+                learning ever since thanks to my passion for technology and love for computers.
+                I am currently learning web development and C++, I have also dabbled in Python, Git, 
+                SQl and the unity game engine.
+                <br><br>
+                My understanding of HTML, CSS and JavaScript can be described as rudimentary but due to my
+                creative nature i have created a number of appealing sites. 
+                I condsider myself a avid gamer and I enjoy playing mostly indie games like Hollow Knight and Terraria.
+                <br><br>
+
+
+            </p>
+        </div>
+
+    </div>
+
+       <!--  [ Projects ] -->
+    <div class="Projects">
+        <img src="assets/main/page5.gif" alt="" id="p_page">
+
+        <div class="p_links">
+
+            <a href="subpages/Art/l.html">
+                <img src="assets/main/P_l.gif" alt="">
+            </a>
+
+            <a href="subpages/Art/a.html">
+                <img src="assets/main/P_a.gif" alt="">
+            </a>
+
+            <a href="subpages/Writing/w.html">
+                <img src="assets/main/P_w.gif" alt="">
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 <script src="script.js"></script>
 
-            </body>
-    </html>
+        </body>
+
+        </html>

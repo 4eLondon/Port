@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favi.png">
     <style>
         .vt323-regular {
             font-family: "VT323", monospace;
@@ -20,16 +21,27 @@
             font-weight: 400;
             font-style: normal;
         }
+
+        .block {
+            height: 6rem;
+            background-color: #1d1d1d;
+            width: 100vw;
+            position: fixed;
+        }
     </style>
 </head>
 
 <body style="background-color:#f5ef4e; width: 100vw; height: 100vh; padding: 0; margin: 0; position: relative">
+
+    <nav class="block" style="top:0;"></nav>
     <div
         style="width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="assets/construct.png" alt="Not working" style="height: 200px; width: 200px;">
         <h1 class="press-start-2p-regular" style="color: #1b1b1b;font-size:60px;">Under Construction</h1>
         <p class="vt323-regular" style="color:#1b1b1b; font-size:40px;">This web page is currently being worked on.
             Please try again sometime later.</p>
     </div>
+    <footer class="block" style="bottom:0;"></footer>
 </body>
 
 </html>
